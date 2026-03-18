@@ -1,6 +1,0 @@
-file '/mnt/d/kova/video/audio/01_intro.mp3'
-file '/mnt/d/kova/video/audio/02_problem.mp3'
-file '/mnt/d/kova/video/audio/03_solution.mp3'
-file '/mnt/d/kova/video/audio/04_correction.mp3'
-file '/mnt/d/kova/video/audio/05_proof.mp3'
-file '/mnt/d/kova/video/audio/06_closing.mp3'
