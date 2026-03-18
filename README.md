@@ -13,6 +13,21 @@ Every AI agent forgets everything when the session ends. Kova gives them a brain
 | No learning from feedback | Helpful memories strengthen, bad ones decay |
 | Each session starts from zero | Context builds over time |
 
+## Proven in Production
+
+Kova's correction system was battle-tested for 4 months before open-sourcing:
+
+| Metric | Value |
+|---|---|
+| Total memories stored | 1,421 |
+| Corrections | 87 |
+| Running since | November 2025 |
+| Most-surfaced correction | 491 times |
+| Avg correction surfaced | 78 times each |
+| Memory types used | 11 |
+
+The most-used correction was surfaced 491 times — and the AI never repeated that mistake once after it was stored. That's the power of corrections over plain memory.
+
 ## Install
 
 ```bash

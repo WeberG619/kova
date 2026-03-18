@@ -1,6 +1,6 @@
 [build-system]
 requires = ["setuptools>=68.0", "wheel"]
-build-backend = "setuptools.backends._legacy:_Backend"
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "kova"
@@ -16,7 +16,6 @@ keywords = ["ai", "memory", "llm", "mcp", "agents", "corrections"]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
@@ -30,9 +29,9 @@ classifiers = [
 mcp = ["mcp>=1.0.0"]
 
 [project.urls]
-Homepage = "https://github.com/webergouin/kova"
-Repository = "https://github.com/webergouin/kova"
-Issues = "https://github.com/webergouin/kova/issues"
+Homepage = "https://github.com/WeberG619/kova"
+Repository = "https://github.com/WeberG619/kova"
+Issues = "https://github.com/WeberG619/kova/issues"
 
 [project.scripts]
 kova = "kova.server:main"
