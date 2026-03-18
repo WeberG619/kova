@@ -22,9 +22,9 @@ The result? I correct it once — it never makes that mistake again. Not in the 
 
 They gave us MCP for free. They gave us agents for free. So I'm giving away the missing piece — for free too.
 
-Today I'm open-sourcing Kova — a lightweight memory layer any developer can plug into any AI application.
+Today I'm open-sourcing Recal — a lightweight memory layer any developer can plug into any AI application.
 
-The core idea is simple. Most memory systems do two things: store and recall. Kova does five:
+The core idea is simple. Most memory systems do two things: store and recall. Recal does five:
 
 Store → Recall → Correct → Feedback → Decay
 
@@ -42,15 +42,15 @@ Link in comments.
 
 ## First Comment (post immediately after)
 
-GitHub: https://github.com/WeberG619/kova
+GitHub: https://github.com/WeberG619/recal
 
 Quick start:
 ```
-pip install kova
+pip install recal
 ```
 
 ```python
-from kova import Memory
+from recal import Memory
 mem = Memory("my_app")
 mem.correct("never do X, always do Y")
 mem.recall("how should I do this?")  # correction surfaces first

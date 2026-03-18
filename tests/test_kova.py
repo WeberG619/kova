@@ -1,10 +1,10 @@
-"""Tests for Kova."""
+"""Tests for Recal."""
 
 import tempfile
 import os
 from pathlib import Path
 
-from kova import Memory
+from recal import Memory
 
 
 def _tmp_mem(name="test"):

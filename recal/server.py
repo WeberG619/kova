@@ -1,15 +1,15 @@
-"""Kova MCP Server — Plug memory into any MCP-compatible AI.
+"""Recal MCP Server — Plug memory into any MCP-compatible AI.
 
 Run:
-    python -m kova.server
-    python -m kova.server --name my_app --port 0
+    python -m recal.server
+    python -m recal.server --name my_app --port 0
 
 Or add to your MCP config:
     {
         "mcpServers": {
-            "kova": {
+            "recal": {
                 "command": "python",
-                "args": ["-m", "kova.server"]
+                "args": ["-m", "recal.server"]
             }
         }
     }
@@ -26,7 +26,7 @@ try:
 except ImportError:
     print(
         "MCP server requires the 'mcp' package.\n"
-        "Install it with: pip install kova[mcp]\n"
+        "Install it with: pip install recal[mcp]\n"
         "Or: pip install mcp",
         file=sys.stderr,
     )
@@ -41,12 +41,12 @@ _mem: Memory | None = None
 def _get_mem() -> Memory:
     global _mem
     if _mem is None:
-        _mem = Memory("kova")
+        _mem = Memory("recal")
     return _mem
 
 
 mcp = FastMCP(
-    "kova",
+    "recal",
     version="0.1.0",
     description="Persistent, correctable memory for AI. The memory layer that learns from mistakes.",
 )
@@ -146,7 +146,7 @@ def check(planned_action: str, namespace: str = "default") -> str:
 def helped(memory_id: int, did_help: bool) -> str:
     """Mark whether a surfaced memory actually helped.
 
-    This feedback loop is what makes Kova learn.
+    This feedback loop is what makes Recal learn.
     Helpful memories get stronger. Unhelpful ones decay.
 
     Args:
@@ -185,9 +185,9 @@ def stats() -> str:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Kova MCP Server")
-    parser.add_argument("--name", default="kova",
-                        help="Memory store name (default: kova)")
+    parser = argparse.ArgumentParser(description="Recal MCP Server")
+    parser.add_argument("--name", default="recal",
+                        help="Memory store name (default: recal)")
     parser.add_argument("--namespace", default="default",
                         help="Default namespace")
     args = parser.parse_args()

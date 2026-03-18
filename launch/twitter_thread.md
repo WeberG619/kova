@@ -64,7 +64,7 @@ You correct the AI once — it's permanent.
 
 **Tweet 5 (the product)**
 
-Today I'm releasing Kova — the memory layer that learns from mistakes.
+Today I'm releasing Recal — the memory layer that learns from mistakes.
 
 - 400 lines of Python
 - Zero dependencies (just SQLite)
@@ -72,7 +72,7 @@ Today I'm releasing Kova — the memory layer that learns from mistakes.
 - MCP server included (Claude Code, Cursor, etc.)
 - MIT licensed
 
-https://github.com/WeberG619/kova
+https://github.com/WeberG619/recal
 
 ---
 
@@ -81,7 +81,7 @@ https://github.com/WeberG619/kova
 5 lines of code:
 
 ```python
-from kova import Memory
+from recal import Memory
 mem = Memory("my_app")
 mem.store("user prefers metric")
 mem.correct("never use imperial units")
@@ -98,10 +98,10 @@ The future of AI isn't just smarter models.
 
 It's models that learn from their mistakes.
 
-I'm building that future. Kova is step one.
+I'm building that future. Recal is step one.
 
 If you're building AI agents and tired of starting from zero every session — try it.
 
-GitHub: https://github.com/WeberG619/kova
+GitHub: https://github.com/WeberG619/recal
 
 ---

@@ -1,4 +1,4 @@
-# Kova
+# Recal
 
 **Persistent, correctable memory for AI. The memory layer that learns from mistakes.**
 
@@ -6,11 +6,11 @@
 
 They gave us MCP for free. They gave us agents for free. Now here's the missing piece — **memory that actually learns** — for free too.
 
-Every AI agent forgets everything when the session ends. Kova gives them a brain that persists — and more importantly, a brain that **learns from corrections** so the same mistake never happens twice.
+Every AI agent forgets everything when the session ends. Recal gives them a brain that persists — and more importantly, a brain that **learns from corrections** so the same mistake never happens twice.
 
-## Why Kova?
+## Why Recal?
 
-| Without Kova | With Kova |
+| Without Recal | With Recal |
 |---|---|
 | AI forgets everything each session | Memories persist forever |
 | Same mistakes repeated daily | Corrections prevent repeat errors |
@@ -19,7 +19,7 @@ Every AI agent forgets everything when the session ends. Kova gives them a brain
 
 ## Proven in Production
 
-Kova's correction system was battle-tested for 4 months before open-sourcing:
+Recal's correction system was battle-tested for 4 months before open-sourcing:
 
 | Metric | Value |
 |---|---|
@@ -35,7 +35,7 @@ The most-used correction was surfaced 491 times — and the AI never repeated th
 ## Install
 
 ```bash
-pip install kova
+pip install recal
 ```
 
 **Zero dependencies.** Just Python's built-in SQLite. That's it.
@@ -43,7 +43,7 @@ pip install kova
 ## Quickstart — 5 lines
 
 ```python
-from kova import Memory
+from recal import Memory
 
 mem = Memory("my_app")
 mem.store("user prefers dark mode", tags=["preference"])
@@ -54,7 +54,7 @@ results = mem.recall("what units should I use?")
 
 ## The Killer Feature: Corrections
 
-Most memory systems just store and retrieve. Kova has **corrections** — a special memory type that:
+Most memory systems just store and retrieve. Recal has **corrections** — a special memory type that:
 
 - Always stored at **maximum importance** (10/10)
 - Always **surfaces first** in recall results
@@ -79,7 +79,7 @@ This is the difference between an AI that's smart and an AI that **gets smarter*
 
 ### `Memory(name, db_dir=None, namespace="default")`
 
-Create a memory store. Each name gets its own SQLite database at `~/.kova/<name>.db`.
+Create a memory store. Each name gets its own SQLite database at `~/.recal/<name>.db`.
 
 ### `.store(content, *, tags=None, context="", importance=5)`
 
@@ -115,14 +115,14 @@ Returns `{total, corrections, avg_importance, avg_effectiveness}`.
 
 ## MCP Server
 
-Kova includes an MCP server so any MCP-compatible AI client can use it:
+Recal includes an MCP server so any MCP-compatible AI client can use it:
 
 ```bash
 # Install with MCP support
-pip install kova[mcp]
+pip install recal[mcp]
 
 # Run the server
-python -m kova
+python -m recal
 ```
 
 Add to your MCP config (Claude Code, Cursor, etc.):
@@ -130,15 +130,15 @@ Add to your MCP config (Claude Code, Cursor, etc.):
 ```json
 {
     "mcpServers": {
-        "kova": {
+        "recal": {
             "command": "python",
-            "args": ["-m", "kova"]
+            "args": ["-m", "recal"]
         }
     }
 }
 ```
 
-The server exposes all Kova operations as MCP tools: `store`, `correct`, `recall`, `check`, `helped`, `forget`, `stats`.
+The server exposes all Recal operations as MCP tools: `store`, `correct`, `recall`, `check`, `helped`, `forget`, `stats`.
 
 ## How It Works
 
@@ -154,7 +154,7 @@ The server exposes all Kova operations as MCP tools: `store`, `correct`, `recall
 2. **Corrections > memories** — The ability to say "I was wrong" is more important than total recall.
 3. **Feedback-driven** — Memories that help survive. Memories that don't fade away.
 4. **One file, one store** — Each Memory instance is a single `.db` file. Copy it, back it up, share it.
-5. **Model-agnostic** — Works with any LLM. Kova is the memory, not the brain.
+5. **Model-agnostic** — Works with any LLM. Recal is the memory, not the brain.
 
 ## License
 

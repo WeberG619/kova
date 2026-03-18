@@ -1,4 +1,4 @@
-"""Kova — SQLite + FTS5 storage engine.
+"""Recal — SQLite + FTS5 storage engine.
 
 Zero dependencies. Just Python's built-in sqlite3.
 """
@@ -10,7 +10,7 @@ from pathlib import Path
 from datetime import datetime, timezone
 
 
-DEFAULT_DIR = Path.home() / ".kova"
+DEFAULT_DIR = Path.home() / ".recal"
 
 SCHEMA_VERSION = 1
 
@@ -67,7 +67,7 @@ def _now():
     return datetime.now(timezone.utc).isoformat()
 
 
-class KovaDB:
+class RecalDB:
     """Lightweight SQLite + FTS5 memory store."""
 
     def __init__(self, name: str = "default", db_dir: str | Path | None = None):
