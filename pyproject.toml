@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "neveronce"
-version = "0.1.0"
-description = "Persistent, correctable memory for AI. The memory layer that learns from mistakes."
+version = "0.2.0"
+description = "The pre-flight check for AI agents. Stop your agent from making the same mistake twice."
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.10"
