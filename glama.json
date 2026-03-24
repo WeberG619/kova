@@ -1,0 +1,14 @@
+{
+  "name": "neveronce",
+  "display_name": "NeverOnce",
+  "description": "Persistent, correctable AI memory with zero dependencies. Corrections always surface first and never decay. SQLite-backed, 400 lines of pure Python, MCP server included.",
+  "repository": "https://github.com/WeberG619/neveronce",
+  "license": "MIT",
+  "author": "WeberG619",
+  "categories": ["Knowledge & Memory", "Autonomous Agents"],
+  "tags": ["memory", "corrections", "safety", "sqlite", "mcp"],
+  "runtime": "python",
+  "command": "python -m neveronce.server",
+  "install": "pip install neveronce[mcp]",
+  "platforms": ["linux", "macos", "windows"]
+}
